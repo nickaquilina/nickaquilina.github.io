@@ -8,4 +8,4 @@ Hello World
 
 
 Hash Generation Library
-1. [hashWorks.py](https://nickaquilina.github.io/files/hashWorks.py)
+1. [hashWorks.py](https://nickaquilina.github.io/code/hashWorks.py)
