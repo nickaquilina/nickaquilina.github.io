@@ -28,7 +28,7 @@
                 <br>
                 <br>
                 <br>
-                <b>Links & Dowloadables</b> (Links open in a new Browser tab)
+                <b>Links</b> (Links open in a new Browser tab)
                 <br>
                 <br>
                 Link to the ABM Repository: <a href="https://github.com/nickaquilina/abm" target="_blank">https://github.com/nickaquilina/abm</a>
@@ -47,10 +47,10 @@
                 This repository hosts the ABM model for Assignment 1 for the module GEOG5003M, University of Leeds. All code for the ABM was created in Python 3, using the Anaconda platform, Spyder IDE, Notepad++ and Sublime Text. All libraries used are available in the Anaconda base environment upon install. No extra packages are required.
                 <br>
                 <br>
-                The ABM simulates sheep (possibly cows?) moving randomly in a square 2D space. While moving, the underlying environment is also consumed. When consumption store reaches a certain level, it is again deposited to a diferent co-ordinate on the space. With the current limit set to 100, and consumption of 10 points at each move, the deposited values remain relatively close to the recent movement path of the agent, with respect to the 300x300 2D Space.
+                The ABM simulates sheep (possibly cows?) moving randomly in a square 2D space. While moving, the underlying environment is also consumed. When consumption store reaches a certain level, it is again deposited to a different co-ordinate on the space. With the current limit set to 100, and consumption of 10 points at each move, the deposited values remain relatively close to the recent movement path of the agent, with respect to the 300x300 2D Space.
                 <br>
                 <br>
-                Another feature of the agents in the abm is a configurable neighbour threshold. When 2 agents are close to each other, the resources are shared by way of average.
+                Another feature of the agents in the ABM is a configurable neighbour threshold. When 2 agents are close to each other, the resources are shared by way of average.
                 <br>
                 <br>
                 <br>
@@ -85,7 +85,7 @@
                 <br>
                 <b>model_cli.py</b>
                 <br>
-                └>Model to be executed via command line. No UI is available, except for the plotting window. Being purely command line, this script uses the argparse builtin library in order to parse user input. Note that this may not be as up-to-date as the proper GUI Application, since this was there mainly for the practicals. The GUI Application is the main Application
+                └>Model to be executed via command line. No UI is available, except for the plotting window. Being purely command line, this script uses the argparse builtin library to parse user input. Note that this may not be as up to date as the proper GUI Application, since this was there mainly for the previous practicals. The GUI Application is the main Application
                 <br>
                 <br>
                 <br>
@@ -98,23 +98,23 @@
                 <img src="./screenshots/ui_notes.png" alt="Application just started" class="center" style="width:750px;height:540px;">
                 <br>
                 <br>
-                The application is fairly easy to use. On startup, the <b>Run</b> button and the <b>Load the Agent Start positions from URL</b> functions are disabled. These become available once the environment raster is loaded. Once the environment raster is loaded, the x & y limits are also calcualted from the raster itself. These apply to the bounds of the visuals, as well as the playground limit for the agent.
+                The application is easy to use. On start-up, the <b>Run</b> button and the <b>Load the Agent Start positions from URL</b> functions are disabled. These become available once the environment raster is loaded. Once the environment raster is loaded, the x & y limits are also calculated from the raster itself. These apply to the bounds of the visuals, as well as the playground limit for the agent.
                 <br>
                 <br>
                 <br>
-                When data from the Leeds University website is loaded (via the left-hand checkbox) the limits are calculated again, and are based on the largest co-ordinate within the lists. This was done so that the agents do not possibly wander around in one third of the screen. The limits also affect the Torus overflow.
+                When data from the Leeds University website is loaded (via the left-hand checkbox) the limits are calculated again and are based on the largest co-ordinate within the lists. This was done so that the agents do not possibly wander around in one third of the screen. The limits also affect the Torus overflow.
                 <br>
                 <br>
                 <img src="./screenshots/ui_scatter_online.png" alt="Scatter using online data" class="center">
                 <br>
                 <br>
-                One of the issues I encountered was the time taken for scatter plot display. In the cli version I was actually loadig the scatter plot only once, and then updating the changed data. This made a huge difference in performance. However, in this version, with the GUI, I am displaying the scatter plot every time. Performance is negatively affected. I do believe more than cursory knowledge of the matplotlib framework is required in order to tackle this issue, one that I will undertake in the future.
+                One of the issues I encountered was the time taken for scatter plot display. In the cli version I was loading the scatter plot only once, and then updating the changed data. This made a huge difference in performance. However, in this version, with the GUI, I am displaying the scatter plot every time. Performance is negatively affected. I do believe more than cursory knowledge of the matplotlib framework is required to tackle this issue, one that I will undertake in the future.
                 <br>
                 <br>
                 One feature that helps is the ability to switch on/off the environment image. This only affects the visuals, and the environment is still updated in the background.
                 <br>
                 <br>
-                The <b>Step Increment</b> entry controls whether the agent are increased after every iteration. This is possibly dangerous, considering that incrementing agents by 5 over 250 iterations gets the total number of agents to well over 1000. There is a hard coded limit of 10, and when this feature is in use, the agents list is not created again, but is appended to.
+                The <b>Step Increment</b> entry controls whether the agents are increased after every iteration. This is possibly dangerous, considering that incrementing agents by 5 over 250 iterations gets the total number of agents to well over 1000. There is a hard-coded limit of 10, and when this feature is in use, the agents list is not created again, but is appended to.
                 <br>
                 <br>
                 <br>

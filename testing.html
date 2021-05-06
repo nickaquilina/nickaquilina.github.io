@@ -26,32 +26,43 @@
                 <br>
                 <b>Testing & Debugging</b>
                 <br>
-                <br>
             </p>
             <p>
                 <br>
-                Since the script is split into a lot of functions, I was able to test functions indipendently most of the time. Although I did not write Test Cases, I did use ad-hoc testing, with sample data for functions that supported such testing. Of course, my development was not Test Driven, in that I did not design the tests prior to programming.
+                The program is split into a lot of functions. I was able to test functions independently most of the time. Although I did not write Test Cases, I did use ad-hoc testing, with sample data and expected results for functions that supported such testing. Of course, my development was not Test Driven, in that I did not design the tests prior to programming.
                 <br>
                 <br>
+                Proper logging also plays a part in testing and debugging. I created a basic logging function, which uses the Python logging library. This makes it easy to generate a lot of debug information without the downside of hogging the console through the print function. The logging object is acquired at the start of the main script and used throughout, using:
+                <br>
+                <br>
+                <i>logger.info(message) (or self.logger.info within instances)</i>
+                <br>
+                <i>logger.debug(message) (or self.logger.debug within instances)</i>
+                <br>
+                <i>logger.critical(message) (or self.logger.critical within instances)</i>
+                <br>
+                <br>
+                <br>
+                The <b>info</b> level produces enough logging to know what is happening without getting spammed by messages. This is the level displayed in the console.
+                The <b>debug</b> level then produces copious logging, which can be accessed in a different log file, for convenience. Using a free tool like baretail (for windows), one can filter for certain words with colour coding.
+                <br>
+                <br>
+                <br>
+                Although I am quite happy with the application, there are several points that need to be addressed to make this application better.
                 <br>
                 <br>
                 <br>
                 <b>TODO</b>
                 <br>
                 <br>
-                Although I am quite happy with the application, there are a number of points that need to be addressed
+                <b>1.</b> Include threading so that the UI does not block
+                <br>
+                <b>2.</b> Possibly make it web based, using something like the Flask framework.
+                <br>
+                <b>3.</b> Research on improvement methods for both the matplotlib related functions, and possibility of using multithreaded/multiprocessing.
                 <br>
                 <br>
-                <b>1.</b> Re-write using the Python bindings for the QT framework. I believe it is a more modern, actively developed solution for GUIs
-                <br>
-                <br>
-                <b>2.</b> Include threading so that the UI does not block
-                <br>
-                <br>
-                <b>3.</b> Research on improvement methods for both the matplotlib related fuctions, and possiblility of using multithreaded/multiprocessing.
-                <br>
-                <br>
-                <br>
+
                 <br>
                 <br>
 			</p>
