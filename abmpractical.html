@@ -1,0 +1,134 @@
+<html lang="en">
+    <head>
+        <title>ABM</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    
+    <body>
+        <div id = "logo">
+            <img src="./img/logo.png" alt="aquilonian.com">
+        </div>
+        
+        <div id = "header">
+            <ul id = "linkListT">
+                <!--<li><a href="https://nickaquilina.github.io">Home</a></li>-->
+                <li><a href="./index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="./abmpractical.html">ABM Practical</a></li>
+                <li>|</li>
+                <li><a href="./testing.html">Debugging & Testing</a></li>
+            </ul>
+        </div>
+
+		<div id = "content">
+            <p>
+                <br>
+                <b>Agent Based Modelling Practical 1</b>
+                <br>
+                <br>
+                <br>
+                <b>Links & Dowloadables</b> (Links open in a new Browser tab)
+                <br>
+                <br>
+                MIT License text sourced from <a href="https://opensource.org/licenses/MIT" target="_blank">https://opensource.org/licenses/MIT</a>
+                <br>
+                <a href="https://coolors.co" target="_blank">ABM Source Code</a>
+                <br>
+            </p>
+
+            <p>
+                <br>
+                This repository hosts the Assignment 1 for the (2021) University of Leeds module GEOG5003M, Programming for Geographical Information Analysis. All code for the ABM was created in Python 3, using the Anaconda platform, Spyder IDE, Notepad++ and Sublime Text. All libraries used are available in the Anaconda base environment upon install. No extra packages are required.
+                <br>
+                <br>
+                The ABM simulates sheep (possibly cows?) moving randomly in a square 2D space. While moving, the underlying environment is also consumed. When consumption store reaches a certain level, it is again deposited to a diferent co-ordinate on the space. With the current limit set to 100, and consumption of 10 points at each move, the deposited values remain relatively close to the recent movement path of the agent, with respect to the 300x300 2D Space.
+                <br>
+                <br>
+                Another feature of the agents in the abm is a configurable neighbour threshold. When 2 agents are close to each other, the resources are shared by way of average.
+                <br>
+                <br>
+                <br>
+                <b>Source Files Contained</b>
+                <br>
+                <br>
+                <b>model_cli.py</b>
+                <br>
+                └>Model to be executed via command line. No UI is available, except for the plotting window. Being purely command line, this script uses the argparse builtin library in order to parse user input. Note that this may not be as up-to-date as the proper GUI Application, since this was there mainly for the practicals. The GUI Application is the main Application
+                <br>
+                <br>
+                <b>model_gui.py</b>
+                <br>
+                └>Model version containing a TK UI. All options are configurable via the UI, except for the verbose. That is configurable directly from the script in the form of a variable. I wanted to move that as an argument when starting the application, however, did not, due to time constraints.
+                <br>
+                <br>
+                <b>agentframework.py</b>
+                <br>
+                └>The source file contains the Agent Class for the model. This can be used by both model versions.
+                <br>
+                <br>
+                <b>in.txt</b>
+                <br>
+                └>A CSV file containing the 2D Raster resources data
+                <br>
+                <br>
+                <b>out.txt</b>
+                <br>
+                └>An updated CSV file that is the result of resource gathering and depositing during the function of the model. Note that this file is not available for download. It is automatically saved after a run.
+                <br>
+                <br>
+                <b>functions.py</b>
+                <br>
+                Other functions, also critical for the functioning of the ABM. Some functions which are still in this file should have been moved to the model source file, however I did not manage that due to time constaints.
+                <br>
+                <br>
+                <br><b>The Application</b>
+                <br>
+                <br>
+                On starting up the application, the following interface is presented:
+                <br>
+                <br>
+                <img src="./screenshots/ui_notes.png" alt="Application just started" class="center" style="width:750px;height:540px;">
+                <br>
+                <br>
+                The application is fairly easy to use. On startup, the <b>Run</b> button and the <b>Load the Agent Start positions from URL</b> functions are disabled. These become available once the environment raster is loaded. Once the environment raster is loaded, the x & y limits are also calcualted from the raster itself. These apply to the bounds of the visuals, as well as the playground limit for the agent.
+                <br>
+                <br>
+                <br>
+                When data from the Leeds University website is loaded (via the left-hand checkbox) the limits are calculated again, and are based on the largest co-ordinate within the lists. This was done so that the agents do not possibly wander around in one third of the screen. The limits also affect the Torus overflow.
+                <br>
+                <br>
+                <img src="./screenshots/ui_scatter_online.png" alt="Scatter using online data" class="center">
+                <br>
+                <br>
+                One of the issues I encountered was the time taken for scatter plot display. In the cli version I was actually loadig the scatter plot only once, and then updating the changed data. This made a huge difference in performance. However, in this version, with the GUI, I am displaying the scatter plot every time. Performance is negatively affected. I do believe more than cursory knowledge of the matplotlib framework is required in order to tackle this issue, one that I will undertake in the future.
+                <br>
+                <br>
+                One feature that helps is the ability to switch on/off the environment image. This only affects the visuals, and the environment is still updated in the background.
+                <br>
+                <br>
+                The <b>Step Increment</b> entry controls whether the agent are increased after every iteration. This is possibly dangerous, considering that incrementing agents by 5 over 250 iterations gets the total number of agents to well over 1000. There is a hard coded limit of 10, and when this feature is in use, the agents list is not created again, but is appended to.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+			</p>
+
+			<p>
+                <br>
+                <br>
+                <br>
+			</p>
+        </div>
+		
+		<div id = "footer">
+			<ul id = "linkListB">
+				<li>Nicholas Aquilina 2021</li>
+			</ul>
+		</div>
+    </body>
+</html>
+
+
