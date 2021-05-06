@@ -34,15 +34,17 @@
                 Link to the ABM Repository: <a href="https://github.com/nickaquilina/abm" target="_blank">https://github.com/nickaquilina/abm</a>
                 <br>
                 <br>
+                ABM Practical Downloads: <a href="https://nickaquilina.github.io/files/abm.zip" target="_blank">https://nickaquilina.github.io/files/abm.zip</a>
+                <br>
+                <br>
                 MIT License text sourced from: <a href="https://opensource.org/licenses/MIT" target="_blank">https://opensource.org/licenses/MIT</a>
                 <br>
-                
                 <br>
             </p>
 
             <p>
                 <br>
-                This repository hosts the Assignment 1 for the (2021) University of Leeds module GEOG5003M, Programming for Geographical Information Analysis. All code for the ABM was created in Python 3, using the Anaconda platform, Spyder IDE, Notepad++ and Sublime Text. All libraries used are available in the Anaconda base environment upon install. No extra packages are required.
+                This repository hosts the ABM model for Assignment 1 for the module GEOG5003M, University of Leeds. All code for the ABM was created in Python 3, using the Anaconda platform, Spyder IDE, Notepad++ and Sublime Text. All libraries used are available in the Anaconda base environment upon install. No extra packages are required.
                 <br>
                 <br>
                 The ABM simulates sheep (possibly cows?) moving randomly in a square 2D space. While moving, the underlying environment is also consumed. When consumption store reaches a certain level, it is again deposited to a diferent co-ordinate on the space. With the current limit set to 100, and consumption of 10 points at each move, the deposited values remain relatively close to the recent movement path of the agent, with respect to the 300x300 2D Space.
@@ -54,10 +56,6 @@
                 <br>
                 <b>Source Files Contained</b>
                 <br>
-                <br>
-                <b>model_cli.py</b>
-                <br>
-                └>Model to be executed via command line. No UI is available, except for the plotting window. Being purely command line, this script uses the argparse builtin library in order to parse user input. Note that this may not be as up-to-date as the proper GUI Application, since this was there mainly for the practicals. The GUI Application is the main Application
                 <br>
                 <br>
                 <b>model_gui.py</b>
@@ -83,6 +81,12 @@
                 <b>functions.py</b>
                 <br>
                 Other functions, also critical for the functioning of the ABM. Some functions which are still in this file should have been moved to the model source file, however I did not manage that due to time constaints.
+                <br>
+                <br>
+                <b>model_cli.py</b>
+                <br>
+                └>Model to be executed via command line. No UI is available, except for the plotting window. Being purely command line, this script uses the argparse builtin library in order to parse user input. Note that this may not be as up-to-date as the proper GUI Application, since this was there mainly for the practicals. The GUI Application is the main Application
+                <br>
                 <br>
                 <br>
                 <br><b>The Application</b>
